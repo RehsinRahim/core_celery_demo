@@ -27,9 +27,9 @@ app.conf.update(result_expires=3600,
 
 app.conf.beat_schedule = {
     "every day between 6 AM & 18 PM": {
-        "task": "update_status",  # <---- Name of task
-        "schedule": crontab(hour='6, 17',
-                            minute=32,
+        "task": "home.tasks.update_status",  # <---- Name of task
+        "schedule": crontab(hour='14, 14',
+                            minute='22,24',
                             )
     },
     

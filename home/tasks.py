@@ -11,6 +11,10 @@ import sys
 def update_status(): 
     race_object = models.Race.objects.all()
     
-    race_object.status = True
-    
-    race_object.save() 
+    for obj in race_object:
+        if obj.status is True:
+            obj.status = False
+            obj.save()
+        else:
+            obj.status = True
+            obj.save()

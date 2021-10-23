@@ -12,14 +12,5 @@ class Race(models.Model):
         db_table = "race"
 
 
-    # def save(self, *args, **kwargs):
-    #     create_task = False 
-    #     if self.pk is None: 
-    #         create_task = True 
-
-    #     super(Race, self).save(*args, **kwargs) 
-
-    #     if create_task: 
-    #         set_race_as_inactive.apply_async(args=[self], eta=self.end_time) 
 
 
